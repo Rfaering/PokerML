@@ -1,0 +1,83 @@
+﻿<UserControl x:Class="TestP.Wpf.PlayGame.PlayerUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TestP.Wpf.PlayGame"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Margin="10" Height="120" Background="{Binding Background}">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="600"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="{Binding Path=Name, Mode=OneWay}" Grid.Row="0"></TextBlock>
+            <TextBlock Text="{Binding Path=Money, Mode=OneWay}" Grid.Row="1"></TextBlock>
+            <TextBlock Text="{Binding Path=Dealer, Mode=OneWay}" Grid.Row="2"></TextBlock>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+
+            <ItemsControl HorizontalAlignment="Left" VerticalAlignment="Center" ItemsSource="{Binding Path=Cards}" >
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Horizontal"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <local:CardUserControl Margin="4px"></local:CardUserControl>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+            <TextBlock Grid.Column="1" VerticalAlignment="Center" Margin="10" Text="{Binding Path=Hand}"></TextBlock>
+        </Grid>
+        
+        
+
+        <Grid Grid.Column="2" VerticalAlignment="Stretch">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="{Binding Path=MoneyInPot}" Foreground="Red" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="20"></TextBlock>
+            <TextBlock Text="{Binding Path=Winnings}" Foreground="Green" FontWeight="Bold" VerticalAlignment="Center" Grid.Column="1" FontSize="20" Margin="20"></TextBlock>
+            <TextBlock Text="{Binding Path=ExpectedReturn}" Foreground="RoyalBlue" FontWeight="Bold" VerticalAlignment="Center" Grid.Column="2" FontSize="20" Margin="20"></TextBlock>
+        </Grid>
+
+        <!--Grid Grid.Column="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" IsEnabled="{Binding Active}" Command="{Binding Raise}">
+                <TextBlock Text="{Binding RaiseText}"></TextBlock>
+            </Button>
+            <Button Grid.Column="1" IsEnabled="{Binding Active}" Command="{Binding Check}">
+                <TextBlock Text="{Binding CheckText}"></TextBlock>
+            </Button>
+            <Button Grid.Column="2" IsEnabled="{Binding Active}" Command="{Binding Fold}">
+                <TextBlock Text="{Binding FoldText}"></TextBlock>
+            </Button>
+        </-->
+    </Grid>
+</UserControl>

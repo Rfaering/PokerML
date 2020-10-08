@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="TestP.Wpf.PlayGame.CardUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TestP.Wpf.PlayGame"
+             mc:Ignorable="d" 
+             >
+    <Grid Background="Black">
+        <Grid Background="White" Width="68" Height="100" Margin="4">
+            <!--Image Name="suit" Source="{Binding Suit}" Grid.RowSpan="2"/>
+            <Image Name="value" Source="{Binding Value}" Grid.RowSpan="2"/-->
+            <Image Source="{Binding CardImage}"></Image>
+        </Grid>
+    </Grid>
+</UserControl>
