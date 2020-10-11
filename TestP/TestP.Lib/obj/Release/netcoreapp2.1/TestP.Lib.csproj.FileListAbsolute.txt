@@ -1,9 +1,0 @@
-C:\Users\rfaer\source\repos\TestP\TestP.Lib\bin\Release\netcoreapp2.1\TestP.Lib.deps.json
-C:\Users\rfaer\source\repos\TestP\TestP.Lib\bin\Release\netcoreapp2.1\TestP.Lib.dll
-C:\Users\rfaer\source\repos\TestP\TestP.Lib\bin\Release\netcoreapp2.1\TestP.Lib.pdb
-C:\Users\rfaer\source\repos\TestP\TestP.Lib\obj\Release\netcoreapp2.1\TestP.Lib.csprojAssemblyReference.cache
-C:\Users\rfaer\source\repos\TestP\TestP.Lib\obj\Release\netcoreapp2.1\TestP.Lib.AssemblyInfoInputs.cache
-C:\Users\rfaer\source\repos\TestP\TestP.Lib\obj\Release\netcoreapp2.1\TestP.Lib.AssemblyInfo.cs
-C:\Users\rfaer\source\repos\TestP\TestP.Lib\obj\Release\netcoreapp2.1\TestP.Lib.csproj.CoreCompileInputs.cache
-C:\Users\rfaer\source\repos\TestP\TestP.Lib\obj\Release\netcoreapp2.1\TestP.Lib.dll
-C:\Users\rfaer\source\repos\TestP\TestP.Lib\obj\Release\netcoreapp2.1\TestP.Lib.pdb
