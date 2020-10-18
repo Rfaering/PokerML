@@ -1,4 +1,5 @@
 ## Commands
 
-    .\env\Scripts\activate.bat
-    py -m install -r requirements.txt
+py -3.6 -m venv .env
+.env\scripts\activate
+pip install -r requirements.txt
